@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>IDGUI计算器</title>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=0.9, minimum-scale=0.9, maximum-scale=1.0, user-scalable=no"/>
+		<link rel="shortcut icon" href="favicon.ico"/>
+<style>
+body {
+    background: #fafafa ;
+    font-family: Helvetica, Arial;
+    background: -webkit-linear-gradient(-45deg, #A3F3a1 0%, #74a8c3 100%);
+  background: linear-gradient(135deg, #A3F3a1 0%, #74a8c3 100%); 
+}
+
+.container {
+  width: 98vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range {
+  display: flex;
+  width: 760px;
+}
+
+.range__slider {
+  width: 55%;
+}
+
+.range__value {
+  width: 35%;
+  margin-left: 45px;    
+  text-align: center;
+  border-left: #e6e4e4 1px solid;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.form-group label {
+  text-transform: uppercase;
+  font-size: .7rem;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.form-group span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #3c3b3b;
+}
+
+.range__slider label {
+  margin-bottom: 10px;
+}
+
+.range__slider [type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 13px;
+  border-radius: 6px;
+  background: #f1f1f1;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* custom thumb */
+.range__slider [type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #7a00ff;
+  border: #f9ca24 5px solid;
+  cursor: pointer;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+
+.range__slider [type="range"]::-webkit-slider-thumb:hover {
+  background: #f0932b;
+}
+
+.range__slider [type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: #f0932b;
+  border: #f9ca24 5px solid; cursor: pointer;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+
+.range__slider [type="range"]::-moz-range-thumb:hover {
+  background: #f9ca24;
+}
+
+/* remove border */
+input::-moz-focus-inner, input::-moz-focus-outer {
+  border: 0;
+}
+A:visited {
+	COLOR: #006600; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #006600; TEXT-DECORATION: none
+}
+A:link {
+	COLOR:#002800; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff6600; text-deroration: none;
+position: relative; left: 1px; top: 1px; clip:rect(   )
+}
+   input{background-color:transparent;width:100px;height:50px;  font-size:30px }
+   input.box{background-color:transparent;color:black;height:40px;width:350px;align:right;}
+
+    body{align:center}
+ .yc{
+  display:none;
+}
+ #xs{
+  position:absolute;
+  font-size:30px
+}
+	.wrapper{
+	width:95%
+		height:200px;
+		box-shadow: 0 0 5px #000;
+		margin:30px auto;
+		text-align:center;
+		padding:15px;
+		box-sizing:border-box;
+	}
+.apr{
+text-align:right;padding-right:20px;
+width:64px;
+}
+</style>
+  <script>
+window.onload = function()
+{
+document.getElementById("text1").focus();
+g=getQueryVariable("g");
+b=getQueryVariable("b");
+a=getQueryVariable("a");
+p=getQueryVariable("p");
+if(g!=""){
+document.f.gas.value=g;
+document.f.bpd.value=b;
+document.f.apr.value=a;
+document.f.price.value=p;
+xbpd();}
+}
+    function check(text1){
+     var  r=document.form.expression.value
+        if(r==0&r!=""){//isNaN也行的,正则可以随意扩展!r.test
+        document.getElementById("hh").className="xs";
+       document.form.result.value="嘿！彩蛋被您发现了";        
+    }else{
+
+document.form.result.value="";
+document.getElementById("hh").className="yc"
+}
+
+}
+function jiecheng(num){
+if(num<=1){return 1;
+}else{
+return num*jiecheng(num-1);
+}
+//return Math.sqrt(2*Math.PI*n)*(n/Math.E)**n;
+}
+function ranit(){
+yuan=document.form.expression.value;
+ if(Number(yuan)+'' == NaN+'' || yuan==""){if(yuan.indexOf("random") != -1)cal();else{set('Math.random()');}
+  }else{
+  yuan=eval(yuan.replace(/\^/g,"**").replace(/\,/g,""));
+  document.form.expression.value="1+Math.floor("+yuan+"*Math.random())";
+  cal();
+  }
+}
+   function set(sign){
+   yuan=document.form.expression.value;
+ if(yuan==""&&sign==".")sign="0.";
+	document.form.expression.value+=sign;
+	}
+ function setfun(sign){
+  yuan=document.form.expression.value;
+ if(yuan=="")yuan=0;
+  if(sign=="!" || sign=="！"){yuan=Math.round(eval(yuan.replace(/\^/g,"**").replace(/\,/g,"")));
+  if(yuan>170)yuan=170;
+  document.form.result.value=yuan+"! = "+jiecheng(yuan);
+  }else{
+ document.getElementById('mathfun').value=sign;
+	document.form.expression.value="Math."+sign+"("+yuan+")";
+	cal();
+	}
+	}
+   function cal(){
+    yuan=document.form.expression.value;
+	if(yuan==""){yuan="Math.floor(Math.random()*10)*111111111111111+0.000001";document.getElementById('mathfun').value="random";}
+	document.form.result.value=eval(yuan.replace(/\^/g,"**").replace(/\,/g,""));
+	//.replace(/\%/g,"*0.01")
+		}
+   function clearText(){
+	document.form.expression.value="";
+	document.form.result.value="";
+	}
+	function aprapy(){
+	var apy=document.form.expression.value.replace(/\^/g,"**").replace(/\%/g,"*0.01").replace(/\,/g,"");
+	if(apy==""){ apy=100; }else{
+	apy=eval(apy)*100;}
+	apr=(1+apy/100)**(1/365)*365-365;
+	 document.form.result.value=Math.round(100*apy)/100+"% → "+Math.round(10000*apr)/100+"%";
+	}
+	function wuchang(){
+	var x=document.form.expression.value.replace(/\^/g,"**").replace(/\%/g,"*0.01").replace(/\,/g,"");
+	if(x==""){ x=1; }else{
+	x=eval(x);}
+	losts=Math.round(10000*( 1-((1+x)*(1/(1+x))**0.5+ 1/((1/(1+x))**0.5))/(1+(1+x)) ))/100;
+	 document.form.result.value=Math.round(x*100)+"%  ↓  -"+Math.round(100*losts)/100+"%";
+	}
+	function backspace(){
+	 var str=document.form.expression.value;
+	 var len=str.length;
+	 str=str.substring(0,len-1); 
+	 document.form.expression.value=str;
+	}
+	function changeSymbol(){
+	 var num=parseFloat(document.form.expression.value);
+	 num*=-1;
+	 document.form.expression.value=num;
+	}
+function keyLogin(){
+ 
+ if (event.keyCode==13)   //回车键的键值为13
+ document.getElementById("input1").click();  //调用登录按钮的登录事件
+    // cal();
+}
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+  </script>
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c65dd7d15ecfb3a23baf04543045f8b8";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+ </head>
+ <body onkeydown=keyLogin();>
+ <center>
+ <div>
+ 
+<h1>IDGUI计算器</h1>
+  <form name="form">
+   <p><input type="text" name="expression"  class="box" id="text1" onpropertychange='check(this.value)' oninput='check(this.value)' onchange="s=this.value;if(s.substring(0,4)=='http'){top.window.location=s;}else{if(s.substring(s.length-4)=='.com'||s.substring(s.length-3)=='.cn'||s.substring(0,4)=='www.')top.window.location='http://btayx.com/e/?e='+s;}" /></p>
+   <p><input type="text" name="result" class="box" /></p>
+   <p>
+   <input type="button" value="CE" style="background: #f0932b;" onclick="clearText();" />
+   <input type="button" value="^" onclick="set('^');" />
+   <input type="button" value="←" onclick="backspace();" />
+   <input type="button" value="/" onclick="set('/');" />
+   </p>
+    <p>
+   <input type="button" value="7" onclick="set(7);" />
+   <input type="button" value="8" onclick="set(8);" />
+   <input type="button" value="9" onclick="set(9);" />
+   <input type="button" value="*" onclick="set('*');" />
+   </p>
+    <p>
+   <input type="button" value="4" onclick="set(4);" />
+   <input type="button" value="5" onclick="set(5);" />
+   <input type="button" value="6" onclick="set(6);" />
+   <input type="button" value="-" onclick="set('-');" />
+   </p>
+    <p>
+   <input type="button" value="1" onclick="set(1);" />
+   <input type="button" value="2" onclick="set(2);" />
+   <input type="button" value="3" onclick="set('3');" />
+   <input type="button" value="+" onclick="set('+');" />
+   </p>
+    <p>
+   <input type="button" value="π" onclick="set('Math.PI');" />
+   <input type="button" value="0" onclick="set(0);" />
+   <input type="button" value="." onclick="set('.');" />
+   <input type="button" value="R" onclick="document.getElementById('mathfun').value='random';ranit();" />
+   </p>
+   <p>
+   <input type="button" value="e" onclick="set('Math.E');" /><!-- -+changeSymbol();-->
+   <input type="button" value="sin" onclick="setfun('sin');" />
+   <input type="button" value="log" onclick="setfun('log10');" />
+   <input type="button" value="=" style="background: #f0932b;" id="input1" onclick="cal();" />
+   </p>
+      <p>
+   <input type="button" value="~&" onclick="wuchang();" />
+   <input type="button" value="‰" onclick="aprapy();" />
+   <input type="button" value="(" onclick="set('(');;" />
+   <input type="button" value=")" onclick="set(')');" />
+   </p>
+  <div id="hh" class="yc" style="padding-left:0px; padding-top:10px; height:60px; width:800px "><font size="22px" color="red">
+  1、符号‰ 天复利APY到单利APR。<br>
+  2、符号~& 相对波动无常损失。<br><br><br><br><br><br><br><br><br></font></div>
+  </form>
+   
+ <center>
+ 
+ <div class="wrapper" style="max-width:600px;">
+ <center><a target=_blank href="https://www.runoob.com/jsref/jsref-obj-math.html"><b style="font-size:28px;">Math.</b></a><input type="text" size="2" id="mathfun" value="！" onclick="if(this.value=='！')this.value='';" onchange="if(this.value!='')setfun(this.value);" style="height:28px;" /><a target=_blank href="https://calculator.apps.chrome/"><b style="font-size:28px;">谷歌</b></a> <a target=_blank href="random.htm"><b style="font-size:28px;">随机</b></a> <b style="font-size:28px;"><a target=_blank href="run.htm?txt=A,%E2%82%BF,C,%C3%90">大</a><a target=_blank href="run.htm?txt=0,1,2,3,4,5,6,7,8,9">转</a><a target=_blank href="run.htm?txt=1,2,3,4,5,6">盘</a></b> </center>
+ </div>
+<!--<iframe src="http://wiccm.com/waykinft.com/?defige.com" width="100%" height="698"></iframe>-->
+<br><br>
+ 
+  <div class="wrapper" style="max-width:900px;">
+<b style="font-size:28px;">Ahr999指数计算</b>： <a target=_blank href="http://btayx.com/btcie.com/">浏览历史</a>  <a target=_blank href=http://btayx.com/ahr999.com/>200定投</a><br />
+<form name="a"><b>参数：Y=<input name="cs" type="text" size="3" onchange="ahr();" value="5.7321" />*X-<input name="sc" type="text" size="3" onchange="ahr();" value="16.648" />
+两百定投<input name="dt" type="text" size="4" onchange="ahr();"  value="27936" />当前<input name="price" type="text" size="4" onchange="ahr();" value="35000" />
+<br /><span id="outsahr" style="color:#00FFFF;font-size:28px;"></span></b><br />
+Ahr999 = 当前*当前/200天定投成本/(10^(5.7321*Math.log10(<span id=biday>天</span>)-16.648))<br />
+其中<b><span id=bidays>天</span></b>是2009/1/3距今的天数，<a target=_blank href="http://btayx.com/ahr999.com/"><b>定投</b>可0.45后</a>查看，<a target=_blank href="http://btayx.com/ahr999.com/canshu.htm"><b>参数</b>可散点图</a>趋势拟合。</form>
+<script>
+var now = new Date();
+var xxdate = new Date('2009/01/03 0:0:0');
+var days=Math.floor((now.getTime() - xxdate.getTime())/1000/60/60/24);
+bidays.innerHTML=days;
+biday.innerHTML=days;
+function ahr(){
+var btcp=1*document.a.price.value;
+var dt=1/document.a.dt.value;
+var yuce=10**(document.a.cs.value * Math.log10(days) - document.a.sc.value);
+var yuced=1/yuce;
+outsahr.innerHTML= days+"天  "+ (yuce).toFixed(0)+"拟合   Ahr999=<b style='color:red;'>"+(btcp*btcp*dt*yuced).toFixed(5)+"</b>";
+}
+</script><br />
+</div>
+<br />
+<div class="wrapper" style="max-width:900px;">
+<div class="container">
+  <form class="range">
+    <div class="form-group range__slider">
+      <input type="range" step="1">
+    </div><!--/form-group-->
+    <div class="form-group range__value">
+      <label>等分定积无常损失</label>
+      <span></span>            
+    </div><!--/form-group-->
+  </form>
+</div>
+</div>
+<center>	
+</div><br /><Br />
+<hr /><span id="menu"></span><a href="https://idgui.com">idgui.com </a>
+<!--<script src="../000000/menu.js"></script><script src="http://btayx.com/tip/tip.js"></script>-->
+<br></center>
+<script>
+
+class Slider {
+  constructor (rangeElement, valueElement, options) {
+    this.rangeElement = rangeElement
+    this.valueElement = valueElement
+    this.options = options
+
+    // Attach a listener to "change" event
+    this.rangeElement.addEventListener('input', this.updateSlider.bind(this))
+  }
+
+  // Initialize the slider
+  init() {
+    this.rangeElement.setAttribute('min', options.min)
+    this.rangeElement.setAttribute('max', options.max)
+    this.rangeElement.value = options.cur
+
+    this.updateSlider()
+  }
+
+  // Format the money
+  asMoney(value) {
+var x=parseFloat(value)/100;  
+    return parseFloat(value) + '%<span style="color:red;">-' +Math.round(10000*( 1-((1+x)*(1/(1+x))**0.5+ 1/((1/(1+x))**0.5))/(1+(1+x)) ))/100+ '%</span>' 
+ //     .toLocaleString('en-US', { maximumFractionDigits: 2 })
+  }
+
+  generateBackground(rangeElement) {   
+    if (this.rangeElement.value === this.options.min) {
+      return
+    }
+
+    let percentage =  (this.rangeElement.value - this.options.min) / (this.options.max - this.options.min) * 100
+    return 'background: linear-gradient(to right, #50299c, #7a00ff ' + percentage + '%, #d3edff ' + percentage + '%, #dee1e2 100%)'
+  }
+
+  updateSlider (newValue) {
+    this.valueElement.innerHTML = this.asMoney(this.rangeElement.value)
+    this.rangeElement.style = this.generateBackground(this.rangeElement.value)
+  }
+}
+
+let rangeElement = document.querySelector('.range [type="range"]')
+let valueElement = document.querySelector('.range .range__value span') 
+
+let options = {
+  min: 0,
+  max: 888,
+  cur: 300
+}
+
+if (rangeElement) {
+  let slider = new Slider(rangeElement, valueElement, options)
+
+  slider.init()
+}
+</script>
+	</body>
+</html>
