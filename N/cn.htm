@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="gb2312" />
+    <title>中文码 棕比特ZongBTC.com</title>
+    <meta content="脑口令，脑钱包学习交流，加密电子币脑钱包平台，双脑脑钱包，电子币如比特币、狗狗币、莱特币等的脑钱包的使用交流。Client-side Bitcoin address and deterministic wallets generator, Base58 converter, transaction builder, signing and verifying messages with Bitcoin address" name="description" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="bitcoin address generator" name="description" />
+    <meta content="brainwallet" name="author" />
+	<link href="zong.ico" rel="shortcut icon" />
+    <script src="js/hanzi.js"></script>
+    <script src="js/bitcoinjs-min.js"></script>
+    <script src="js/miyu.js"></script>
+    <style type="text/css">
+body {
+	font-size:14px;
+	letter-spacing: 0.05em;
+	background-image:url(http://idgui.com/images/bg.jpg);
+background-attachment:fixed;
+	margin: 10;
+	padding: 0;
+	color: #000;
+	min-width:220px;
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px;  PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Microsoft YaHei, Helvetica, Tahoma;  PADDING-TOP: 0px
+}
+A:visited {
+	COLOR: #006600; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #006600; TEXT-DECORATION: none
+}
+A:link {
+	COLOR:#002800; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff6600; text-deroration: none;
+position: relative; left: 1px; top: 1px; clip:rect(   )
+}
+</style>
+    <base target="_blank"/>
+   </head>
+  <body>
+  <h1>&nbsp;&nbsp;&nbsp;<img src="ZongBTC.png" width="50" height="50">中文口令编码<span style="font-size:18px; color:#963">&nbsp;ZongBTC.com</span></h1>
+<form name="f" method="post" action=""><center><div id="biaddrs"></div>
+<input name="addrs" type="text" id="addrs" style="width:94%; font-size:17px; margin-bottom:9px; padding-left:3px;" onFocus="this.select();var res = parseBase58Check(this.value);hexs=Crypto.util.bytesToHex(res[1]);document.f.poetry.value=hz_decode(mn_encode(hexs));document.f.hz.value=mn_encode(hexs);" onChange="var res = parseBase58Check(this.value);hexs=Crypto.util.bytesToHex(res[1]);document.f.poetry.value=hz_decode(mn_encode(hexs));document.f.hz.value=mn_encode(hexs);" value="1DogeKd9JrUNzFaLEyWAVxCVXSvWxe6sAm"><br>    
+<textarea name="poetry" rows="10" id="poetry" style="width:47%; font-size:24px" onChange="if(mn_decode(this.value)=='（试试密语词组）'){document.f.hz.value=mn_encode(this.value);}else{document.f.hz.value=mn_encode(mn_decode(this.value));addrstr(mn_decode(this.value))}" onKeyUp="if(mn_decode(this.value)=='（试试密语词组）'){document.f.hz.value=mn_encode(this.value);}else{document.f.hz.value=mn_encode(mn_decode(this.value));addrstr(mn_decode(this.value))}">cool cool cool</textarea>
+  <textarea name="hz" rows="10" id="hz" style="width:47%; font-size:24px" onFocus="document.f.poetry.value=hz_decode(this.value);addrstr(mn_decode(hz_decode(this.value)));" onChange="document.f.poetry.value=hz_decode(this.value);addrstr(mn_decode(hz_decode(this.value)));" onClick="if(this.value=='中文码')this.value=''" onKeyUp="document.f.poetry.value=hz_decode(this.value);addrstr(mn_decode(hz_decode(this.value)));">中文码</textarea><br>
+  <input name="z" type="button" id="z" onClick="document.f.hz.value=miyu2hz(document.f.poetry.value);" value=">>密语词组转汉字">  
+  <a href="https://iancoleman.github.io/bip39/#chinese_simplified">(</a><input name="z" type="button" id="z" onClick="document.f.hz.value=miyu2gfhz(document.f.poetry.value);" title="与iancoleman兼容" value=">>">
+  <a href="http://www.idgui.com/N/miyu.htm?ZongBTC.com">O</a>
+  <input name="h" type="button" onClick="document.f.poetry.value=gfhz2miyu(document.f.hz.value);" id="h" title="与iancoleman兼容" value="<<"><a href="https://coinomi.com/recovery-phrase-tool.html">)</a>
+  <input name="h" type="button" onClick="document.f.poetry.value=hz2miyu(document.f.hz.value);" id="h" value="汉字转密语词组<<">
+  <br><br>
+</center>
+&nbsp;&nbsp;&nbsp;各用法说明：&nbsp;<a href="http://www.idgui.com/N/#converter">脑口令转换工具</a> &nbsp; <a href="http://www.zdic.net/z/zb/cc1.htm" title="前面的1626字，并对其中91个负面字进行替代">编码自常用字</a>&nbsp;&nbsp;<a href="http://www.idgui.com/N/miyu.htm?ZongBTC">密语词组</a><br>
+<strong>&nbsp;&nbsp;&nbsp;上边（转化中文Z地址）</strong>币地址，币私钥(压缩或非压缩)。<br>
+<strong>&nbsp;&nbsp;&nbsp;左边（通用转化中文码）</strong><a href="http://www.idgui.com/N/#converter">Poetry</a>编码字组，或16进制数。<br>
+<strong>&nbsp;&nbsp;&nbsp;右边（解密中文Z地址）</strong>币地址对应15字,私钥对应24字。<br>
+
+<strong>&nbsp;&nbsp;&nbsp;下边（密语词组转中文）</strong> 可左边<a href="http://www.idgui.com/N/miyu.htm?vBTCv.com">Rot13</a>密语词组，和右边汉字之间，两种方式转化。</strong> 
+</form>
+<script>
+	    function parseBase58Check(address) {
+        var bytes = Bitcoin.Base58.decode(address);
+        var end = bytes.length - 4;
+        var hash = bytes.slice(0, end);
+        var checksum = Crypto.SHA256(Crypto.SHA256(hash, {asBytes: true}), {asBytes: true});
+        if (checksum[0] != bytes[end] ||
+            checksum[1] != bytes[end+1] ||
+            checksum[2] != bytes[end+2] ||
+            checksum[3] != bytes[end+3])
+                throw new Error("Wrong checksum");
+		
+        var version = hash.shift();
+		if(address!="1DogeKd9JrUNzFaLEyWAVxCVXSvWxe6sAm"){
+		if(version<0x80)
+				biaddrs.innerHTML="<a href=http://idgui.com/t/?"+address+"&t=ZongBTC.com><b>"+address+"</b></a>";
+				else
+				biaddrs.innerHTML="<a href=http://pan.baidu.com/share/qrcode?w=300&h=300&url="+address+"><b>"+address+"</b></a>&nbsp;&nbsp;<a href=http://idgui.com/t/?"+key2addrs(address,version-0x80)+"&t=ZongBTC.com><b>"+key2addrs(address,version-0x80)+"</b></a>";
+				}
+        return [version, hash];
+    }
+
+//var tx_dest = '1DogeKd9JrUNzFaLEyWAVxCVXSvWxe6sAm';
+//var res = parseBase58Check(tx_dest);
+  //          type = ' ver. 0x' + Crypto.util.bytesToHex([res[0]]);
+   //         bytes = res[1];
+function key2addrs(keys,addrtype){
+	var secret = Bitcoin.Base58.decode(keys).slice(1, 33);
+    var eckey = new Bitcoin.ECKey(secret);
+	var addr = new Bitcoin.Address(eckey.getPubKeyHash());
+	addr.version = addrtype ? addrtype : 0;
+        return addr.toString();
+	}
+function addrstr(hex){
+	zs=hex.length;
+	document.f.addrs.value="["+zs/2+"*8bit:] "+hex;
+	if(zs==40){
+    var bytes = Crypto.util.hexToBytes(hex);
+    var addr = new Bitcoin.Address(bytes);
+              addr.version =0x00;
+			   text = addr.toString();
+	   document.f.addrs.value= "[BTC地址:] "+text;
+	   biaddrs.innerHTML="<a href=http://idgui.com/t/?"+text+"&t=ZongBTC.com><b>"+text+"</b></a>";
+	          addr.version =0x1E;
+			   text = addr.toString();
+       document.f.addrs.value=document.f.addrs.value+"  [Doge地址:] "+text;
+	}
+	if(zs==64){
+    var bytes = Crypto.util.hexToBytes(hex);
+    var addr = new Bitcoin.Address(bytes);
+              addr.version =0x80;
+			   text = addr.toString();
+	   document.f.addrs.value= "[BTC私钥:] "+text;
+	   biaddrs.innerHTML="<input type='button' onclick=\"if (window.clipboardData)window.clipboardData.setData('Text','"+text+"');biaddrs.innerHTML='"+text+"<br><img src=http://pan.baidu.com/share/qrcode?w=100&h=100&url="+text+" />';\" value='私钥'><a href=http://pan.baidu.com/share/qrcode?w=300&h=300&url="+text+" title='点击新标签页打开二维码，手机扫码' onMouseOver=\"document.f.addrs.value='"+text+"';\"><img src='http://www.btc38.com/statics/images/coin_logos/BTC_logo.png' height='18' border='0' /></a><input type='button' onclick=\"biaddrs.innerHTML='"+key2addrs(text,0x00)+"<br><img src=http://pan.baidu.com/share/qrcode?w=100&h=100&url="+key2addrs(text,0x00)+" />';\" value='地址'>";
+	          addr.version =0x9E;
+			   text = addr.toString();
+			   biaddrs.innerHTML+="&nbsp;&nbsp;<input type='button' onclick=\"if (window.clipboardData)window.clipboardData.setData('Text','"+text+"');biaddrs.innerHTML='"+text+"<br><img src=http://pan.baidu.com/share/qrcode?w=100&h=100&url="+text+" />';\" value='私钥'><a href=http://pan.baidu.com/share/qrcode?w=300&h=300&url="+text+" title='点击新标签页打开二维码，手机扫码' onMouseOver=\"document.f.addrs.value='"+text+"';\"><img src='http://www.btc38.com/statics/images/coin_logos/DOGE_logo.png' height='18' border='0' /></a><input type='button' onclick=\"biaddrs.innerHTML='"+key2addrs(text,0x1E)+"<br><img src=http://pan.baidu.com/share/qrcode?w=100&h=100&url=dogecoin:"+key2addrs(text,0x1E)+" />';\" value='地址'>";
+       document.f.addrs.value=document.f.addrs.value+"  [Doge私钥:] "+text;
+	   addr.version =0xB0;
+			   text = addr.toString();
+			   biaddrs.innerHTML+="&nbsp;&nbsp;<input type='button' onclick=\"if (window.clipboardData)window.clipboardData.setData('Text','"+text+"');biaddrs.innerHTML='"+text+"<br><img src=http://pan.baidu.com/share/qrcode?w=100&h=100&url="+text+" />';\" value='私钥'><a href=http://pan.baidu.com/share/qrcode?w=300&h=300&url="+text+" title='点击新标签页打开二维码，手机扫码' onMouseOver=\"document.f.addrs.value='"+text+"';\"><img src='http://www.btc38.com/statics/images/coin_logos/LTC_logo.png' height='18' border='0' /></a><input type='button' onclick=\"biaddrs.innerHTML='"+key2addrs(text,0x30)+"<br><img src=http://pan.baidu.com/share/qrcode?w=100&h=100&url=litecoin:"+key2addrs(text,0x30)+" />';\" value='地址'>";
+	}
+	if(zs==72&&hex.substring(hex.length-7,hex.length)=="0000001"){
+		hex=hex.substring(0,hex.length-7)+"1";
+    var bytes = Crypto.util.hexToBytes(hex);
+    var addr = new Bitcoin.Address(bytes);
+              addr.version =0x80;
+			   text = addr.toString();
+	   document.f.addrs.value= "[BTC压缩私钥:] "+text;
+	          addr.version =0x9E;
+			   text = addr.toString();
+       document.f.addrs.value=document.f.addrs.value+"  [Doge压缩私钥:] "+text;
+	}
+}
+ </script>
+<DIV style="DISPLAY: none" id=the_baidu>
+<script type="text/javascript"> 
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe01b40878de0f7a53447138d441d4ddf' type='text/javascript'%3E%3C/script%3E"));
+</script></DIV>
+  <p align="center">&copy; 2017 <a href="http://www.idgui.com/" target="_blank">idgui.com</a>&nbsp;&nbsp;<span id="tips"><a href=http://ZongBTC.com>ZongBTC.com</a></span></p>
+  </body>
+</html>
