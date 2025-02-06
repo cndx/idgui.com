@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>ÄÔ¿ÚÁî¹¤¾ßÑ§Ï°½»Á÷ÍøË«ÄÔÄÔÇ®°ü - Bitcoin Dogecoin Brainwallet Study</title>
-    <meta content="ÄÔ¿ÚÁî£¬ÄÔÇ®°üÑ§Ï°½»Á÷£¬¼ÓÃÜµç×Ó±ÒÄÔÇ®°üÆ½Ì¨£¬Ë«ÄÔÄÔÇ®°ü£¬Èç±ÈÌØ¡¢¹·¹·¡¢À³ÌØµÈµÄÄÔÇ®°üµÄÊ¹ÓÃ½»Á÷¡£Client-side Bitcoin address and deterministic wallets generator, Base58 converter, transaction builder, signing and verifying messages with Bitcoin address" name="description" />
+   <meta charset="gb2312" />
+    <title>è„‘å£ä»¤å·¥å…·å­¦ä¹ äº¤æµç½‘åŒè„‘è„‘é’±åŒ… - Bitcoin Dogecoin Brainwallet Study</title>
+    <meta content="è„‘å£ä»¤ï¼Œè„‘é’±åŒ…å­¦ä¹ äº¤æµï¼ŒåŠ å¯†ç”µå­å¸è„‘é’±åŒ…å¹³å°ï¼ŒåŒè„‘è„‘é’±åŒ…ï¼Œå¦‚æ¯”ç‰¹ã€ç‹—ç‹—ã€è±ç‰¹ç­‰çš„è„‘é’±åŒ…çš„ä½¿ç”¨äº¤æµã€‚Client-side Bitcoin address and deterministic wallets generator, Base58 converter, transaction builder, signing and verifying messages with Bitcoin address" name="description" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="bitcoin address generator" name="description" />
     <meta content="brainwallet" name="author" />
@@ -68,34 +69,34 @@ var _hmt = _hmt || [];
     <header class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button class="navbar-toggle" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar">&nbsp;</span> <span class="icon-bar">&nbsp;</span> <span class="icon-bar">&nbsp;</span></button> <a class="navbar-brand" href="http://NaoKouLing.com/">ÄÔ¿ÚÁîNaoKouLing</a>
+          <button class="navbar-toggle" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar">&nbsp;</span> <span class="icon-bar">&nbsp;</span> <span class="icon-bar">&nbsp;</span></button> <a class="navbar-brand" href="http://NaoKouLing.com/">è„‘å£ä»¤NaoKouLing</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active">
-              <a data-toggle="tab" href="#home">Ê×Ò³Éú³É</a></li>
-            <li><a data-toggle="tab" href="#generator" id="tab-generator">ĞÅÏ¢</a></li>
-			<li><a data-toggle="tab" href="#tx" id="tab-tx">´«Êä·¢ËÍ</a></li>
-            <li><a data-toggle="tab" href="#converter" id="tab-converter">×ª»»</a></li>
-			<li><a data-toggle="tab" href="#chains" id="tab-chains">ÅúÁ¿</a></li>          
-			<li><a data-toggle="tab" href="#sign" id="tab-sign">Ç©ÃûĞÅÏ¢</a></li>
-            <li><a data-toggle="tab" href="#verify" id="tab-verify">ÑéÖ¤Ç©Ãû</a></li>
-            <li><a data-toggle="tab" href="#others" id="tab-others">¹¤¾ß¼¯</a></li>
+              <a data-toggle="tab" href="#home">é¦–é¡µç”Ÿæˆ</a></li>
+            <li><a data-toggle="tab" href="#generator" id="tab-generator">ä¿¡æ¯</a></li>
+			<li><a data-toggle="tab" href="#tx" id="tab-tx">ä¼ è¾“å‘é€</a></li>
+            <li><a data-toggle="tab" href="#converter" id="tab-converter">è½¬æ¢</a></li>
+			<li><a data-toggle="tab" href="#chains" id="tab-chains">æ‰¹é‡</a></li>          
+			<li><a data-toggle="tab" href="#sign" id="tab-sign">ç­¾åä¿¡æ¯</a></li>
+            <li><a data-toggle="tab" href="#verify" id="tab-verify">éªŒè¯ç­¾å</a></li>
+            <li><a data-toggle="tab" href="#others" id="tab-others">å·¥å…·é›†</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown" id="crCurrency">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="crSelect"><span id="crName"><span class=btc>B</span>TC</span>&nbsp;<b class="caret">&nbsp;</b></a>
               <ul class="dropdown-menu dropdown-menu-two-column">
-                <li><a data-target="0x00" href="http://blockchain.info"><span class="pull-right">±ÈÌØBTC</span>Bitcoin</a></li>
-                <li><a data-target="0x26,0x80" href="https://bitinfocharts.com/bitcoin%20gold/explorer/"><span class="pull-right">»Æ½ğBTG</span>BitcoinGold</a></li>
-				<li><a data-target="0x30" href="https://bitinfocharts.com/litecoin/explorer/"><span class="pull-right">À³ÌØLTC</span>Litecoin</a></li>
-                <li><a data-target="0x34" href="https://coinmarketcap.com/currencies/namecoin/"><span class="pull-right">ÓòÃûNMC</span>Namecoin</a></li>
-			  <li><a data-target="0x49,0x99" href="https://www.waykichain.com/">Wayki<span class="pull-right">Î¬»ùÁ´WICC</span></a></li>
-				<li><a data-target="0x1E" href="https://dogechain.info/" target="_blank"><span class="pull-right">¹·¹·DOGE</span>Dogecoin</a></li>
-                <li><a data-target="0x08" href="https://bitinfocharts.com/dash/explorer/"><span class="pull-right">´ïÊÀDASH</span>Dash</a></li>     
-                <li><a data-target="0x3D" href="https://bitinfocharts.com/reddcoin/explorer/"><span class="pull-right">ÈğµÏRDD</span>Reddcoin</a></li>
-                <li><a data-target="0x47" href="https://bitinfocharts.com/vertcoin/explorer/"><span class="pull-right">ÂÌ±ÒVTC</span>Vertcoin</a></li>
-			  <li><a data-target="0x87,0xD2" href="https://www.waykiscan.com/#/"><span class="pull-right">Î¬»ù²âÊÔWic</span>WayKi</a></li></ul></li>
+                <li><a data-target="0x00" href="http://blockchain.info"><span class="pull-right">æ¯”ç‰¹BTC</span>Bitcoin</a></li>
+                <li><a data-target="0x26,0x80" href="https://bitinfocharts.com/bitcoin%20gold/explorer/"><span class="pull-right">é»„é‡‘BTG</span>BitcoinGold</a></li>
+				<li><a data-target="0x30" href="https://bitinfocharts.com/litecoin/explorer/"><span class="pull-right">è±ç‰¹LTC</span>Litecoin</a></li>
+                <li><a data-target="0x34" href="https://coinmarketcap.com/currencies/namecoin/"><span class="pull-right">åŸŸåNMC</span>Namecoin</a></li>
+			  <li><a data-target="0x49,0x99" href="https://www.waykichain.com/">Wayki<span class="pull-right">ç»´åŸºé“¾WICC</span></a></li>
+				<li><a data-target="0x1E" href="https://dogechain.info/" target="_blank"><span class="pull-right">ç‹—ç‹—DOGE</span>Dogecoin</a></li>
+                <li><a data-target="0x08" href="https://bitinfocharts.com/dash/explorer/"><span class="pull-right">è¾¾ä¸–DASH</span>Dash</a></li>     
+                <li><a data-target="0x3D" href="https://bitinfocharts.com/reddcoin/explorer/"><span class="pull-right">ç‘è¿ªRDD</span>Reddcoin</a></li>
+                <li><a data-target="0x47" href="https://bitinfocharts.com/vertcoin/explorer/"><span class="pull-right">ç»¿å¸VTC</span>Vertcoin</a></li>
+			  <li><a data-target="0x87,0xD2" href="https://www.waykiscan.com/#/"><span class="pull-right">ç»´åŸºæµ‹è¯•Wic</span>WayKi</a></li></ul></li>
           </ul>
         </nav>
       </div>
@@ -105,57 +106,57 @@ var _hmt = _hmt || [];
 	  <div class="tab-pane fade in active" id="home">
 	  <form action="/" class="form-horizontal" id="homef" method="get" name="homef">
 	  <fieldset>
-              <legend><b>Ë«ÄÔÄÔ¿ÚÁî¼ÓÃÜµØÖ· NaoKouLing.com</b><br>
-              <span style="font-size:14px">&nbsp;&nbsp;&nbsp;&nbsp;»¶Ó­ÄúÀ´ÄÔ¿ÚÁî¹¤¾ßÆ½Ì¨,¿ªÔ´¿ÉÀëÏßÊ¹ÓÃµÄÄÔ¿ÚÁî¼°Éı¼¶°²È«Ë«ÄÔÄÔ¿ÚÁî¡£</span></legend>
+              <legend><b>åŒè„‘è„‘å£ä»¤åŠ å¯†åœ°å€ NaoKouLing.com</b><br>
+              <span style="font-size:14px">&nbsp;&nbsp;&nbsp;&nbsp;æ¬¢è¿æ‚¨æ¥è„‘å£ä»¤å·¥å…·å¹³å°,å¼€æºå¯ç¦»çº¿ä½¿ç”¨çš„è„‘å£ä»¤åŠå‡çº§å®‰å…¨åŒè„‘è„‘å£ä»¤ã€‚</span></legend>
 			  <div class="form-group">
-                <label class="col-lg-2 control-label" for="sec">ÄÔ¿ÚÁî£º</label>
-                <div class="col-lg-8 controls"><textarea rows="3" class="form-control" id="pass" title="Ò»¶¨Òª×ã¹»¸´ÔÓÇÒ³¤µÄÄÔ¿ÚÁî£¬±à¼­ºóÀë¿ªÉú³É" style="font-size:large;" onChange="tongbu(this.value);" onMouseOver="this.focus();" onMouseOut="tongbu(this.value);" />
+                <label class="col-lg-2 control-label" for="sec">è„‘å£ä»¤ï¼š</label>
+                <div class="col-lg-8 controls"><textarea rows="3" class="form-control" id="pass" title="ä¸€å®šè¦è¶³å¤Ÿå¤æ‚ä¸”é•¿çš„è„‘å£ä»¤ï¼Œç¼–è¾‘åç¦»å¼€ç”Ÿæˆ" style="font-size:large;" onChange="tongbu(this.value);" onMouseOver="this.focus();" onMouseOut="tongbu(this.value);" />
                 </textarea>
-               <strong><a href="http://www.8btc.com/brainwallet-2">Ë«ÄÔ</a>ÄÔ¿ÚÁî</strong>&nbsp;( 1Êä¼òµ¥ÄÔ¿ÚÁî£¬2µã¼ÓºÅ£¬3¸ÄÎª¸´ÔÓÇÒ³¤)<br />
-				<input class="form-control" id="passa" title="×óÄÔ" style=" color:#999;width:45%;font-size:large; float:left"  value="×óÄÔ"/><button style="width:10%;" class="btn btn-default green" id="nqbAdd" type="button" onMouseOver="this.focus();"  onClick="document.getElementById('pass').value=document.getElementById('passa').value+document.getElementById('secs').value+document.getElementById('passb').value;document.getElementById('pass').focus();" >+</button>
-                <input class="form-control" id="passb" title="ÓÒÄÔ" style="color:#999;width:45%;font-size:large; float:right; text-align:right;"  value="ÓÒÄÔ" />
+               <strong><a href="http://www.8btc.com/brainwallet-2">åŒè„‘</a>è„‘å£ä»¤</strong>&nbsp;( 1è¾“ç®€å•è„‘å£ä»¤ï¼Œ2ç‚¹åŠ å·ï¼Œ3æ”¹ä¸ºå¤æ‚ä¸”é•¿)<br />
+				<input class="form-control" id="passa" title="å·¦è„‘" style=" color:#999;width:45%;font-size:large; float:left"  value="å·¦è„‘"/><button style="width:10%;" class="btn btn-default green" id="nqbAdd" type="button" onMouseOver="this.focus();"  onClick="document.getElementById('pass').value=document.getElementById('passa').value+document.getElementById('secs').value+document.getElementById('passb').value;document.getElementById('pass').focus();" >+</button>
+                <input class="form-control" id="passb" title="å³è„‘" style="color:#999;width:45%;font-size:large; float:right; text-align:right;"  value="å³è„‘" />
 				</div><div class="col-lg-2 controls" >
-                  <span id="genAddrQRs"><a href="http://idgui.com/" title="µã»÷²é¿´¸ü¶à"><img src="nao.jpg" border="0" width="148" /></a></span>
+                  <span id="genAddrQRs"><a href="http://idgui.com/" title="ç‚¹å‡»æŸ¥çœ‹æ›´å¤š"><img src="nao.jpg" border="0" width="148" /></a></span>
                 </div>
               </div>
 			  <div class="form-group">
-                <label class="col-lg-2 control-label" for="addrs">Ç®°üµØÖ·£º</label>
+                <label class="col-lg-2 control-label" for="addrs">é’±åŒ…åœ°å€ï¼š</label>
                 <div class="col-lg-8 controls">
-                  <input class="form-control" id="addrs"  title="Bitcoin Addressµã»÷ÏÂÃæÁ´½Ó" onClick="dzurl(this.value);" onMouseOver="this.focus();dzurl(this.value);" type="text" />
+                  <input class="form-control" id="addrs"  title="Bitcoin Addressç‚¹å‡»ä¸‹é¢é“¾æ¥" onClick="dzurl(this.value);" onMouseOver="this.focus();dzurl(this.value);" type="text" />
                 </div>
             </div><div class="form-group">
-                <label class="col-lg-2 control-label" for="secs">Éú³ÉË½Ô¿£º</label>
+                <label class="col-lg-2 control-label" for="secs">ç”Ÿæˆç§é’¥ï¼š</label>
                 <div class="col-lg-8 controls">
-                  <input class="form-control" id="secs" title="ÓĞË½Ô¿¾ÍÓĞÒ»ÇĞ£¬ÇëÎñ±Ø±£ÃÜ" type="text" />
+                  <input class="form-control" id="secs" title="æœ‰ç§é’¥å°±æœ‰ä¸€åˆ‡ï¼Œè¯·åŠ¡å¿…ä¿å¯†" type="text" />
                 </div>
             </div>
 			<div class="form-group">
-                <label class="col-lg-2 control-label" for="sec">Ïà¹ØÍøÖ·:</label>
+                <label class="col-lg-2 control-label" for="sec">ç›¸å…³ç½‘å€:</label>
                                 
                 <div class="col-lg-8 controls"><span id="dizhi"></span><a href="http://btayx.com/naokouling.com/"><br>
-ÄÔ¿ÚÁî</a>&nbsp;<a href="http://idgui.com/tx/">ÊÕ·¢</a>&nbsp;<a href="http://idgui.com/bi3d.com/" target="_blank">Í¼ĞÎ»¯</a>&nbsp;<a href="https://bypassfuture.github.io/"><span class=btc>B</span>ypassfuture</a><a href="http://brainwallet.herokuapp.com/">&nbsp;Heroku</a>&nbsp;&nbsp;<!--<a href="index.html">&nbsp;</a><a href="http://www.idgui.com/BTC" target="_blank"><span class=btc>B</span>ÄÔ·ÖÁÑ</a><a href="http://www.BTCio.com/" target="_blank">°ü</a>&nbsp;<a href="https://naokouling.com/ry">ÈÙÒ«ÄÔ</a>--><a href="http://www.idgui.com/Nqb" target="_blank">ÈÙÒ«ÄÔ</a>&nbsp;&nbsp;<a href="https://www.bitaddress.org" target="_blank"><span class=btc>B</span>itAddress·ÖÁÑ°ü</a>&nbsp;&nbsp;<a href="https://naokouling.com/index.htm#create"></a><a href="http://idgui.com/n/ChainQuery.htm">¶àÖØÇ©Ãû</a>&nbsp;<a href="http://btc.mom/bitcoin"><span class=btc>B</span>tc.mom¹¤¾ß</a></div>
+è„‘å£ä»¤</a>&nbsp;<a href="http://idgui.com/tx/">æ”¶å‘</a>&nbsp;<a href="http://idgui.com/bi3d.com/" target="_blank">å›¾å½¢åŒ–</a>&nbsp;<a href="https://bypassfuture.github.io/"><span class=btc>B</span>ypassfuture</a><a href="http://brainwallet.herokuapp.com/">&nbsp;Heroku</a>&nbsp;&nbsp;<!--<a href="index.html">&nbsp;</a><a href="http://www.idgui.com/BTC" target="_blank"><span class=btc>B</span>è„‘åˆ†è£‚</a><a href="http://www.BTCio.com/" target="_blank">åŒ…</a>&nbsp;<a href="https://naokouling.com/ry">è£è€€è„‘</a>--><a href="http://www.idgui.com/Nqb" target="_blank">è£è€€è„‘</a>&nbsp;&nbsp;<a href="https://www.bitaddress.org" target="_blank"><span class=btc>B</span>itAddressåˆ†è£‚åŒ…</a>&nbsp;&nbsp;<a href="https://naokouling.com/index.htm#create"></a><a href="http://idgui.com/n/ChainQuery.htm">å¤šé‡ç­¾å</a>&nbsp;<a href="http://btc.mom/bitcoin"><span class=btc>B</span>tc.momå·¥å…·</a></div>
               </div> 
 			  <div class="form-group">
-                <label class="col-lg-2 control-label" for="sec"><a href="http://www.8btc.com/tag/%E8%84%91%E9%92%B1%E5%8C%85">ÄÔÇ®°ü×ÊÑ¶</a></label>
+                <label class="col-lg-2 control-label" for="sec"><a href="http://www.8btc.com/tag/%E8%84%91%E9%92%B1%E5%8C%85">è„‘é’±åŒ…èµ„è®¯</a></label>
                 <div class="col-lg-5 controls">
-				<a href="http://www.8btc.com/brainwallet-2" target="_blank">¡¾8<span class=btc>B</span>TC¡¿×óÄÔÓÒÄÔÒ»¸öÍêÃÀ×éºÏ£¬Ë«ÄÔÄÔÇ®°üµ®Éú</a><br>
-                <a href="http://www.8btc.com/bitcoin-brainwallet" target="_blank">¡¾8<span class=btc>B</span>TC¡¿±ÈÌØ±ÒÄÔÇ®°ü£¬ÄãÓ¦¸ÃÓÃ£¡</a><br>
-				<a href="http://8btc.com/thread-21507-1-1.html" target="_blank">¡¾ÄÔÇ®°ü¿ÆÆÕ¡¿ÁÄÁÄÄÔÇ®°üµÄÄÇĞ©ÊÂ¶ù</a><br>
-				<a href="http://www.bitecoin.com/online/2013/11/2899.html" target="_blank">¡¾±ÈÌØ±Ò»ù´¡½ÌÑ§¡¿£ºÄã¶ÔÄÔÇ®°üÃÜÂëÁË½â¶àÉÙ</a>
+				<a href="http://www.8btc.com/brainwallet-2" target="_blank">ã€8<span class=btc>B</span>TCã€‘å·¦è„‘å³è„‘ä¸€ä¸ªå®Œç¾ç»„åˆï¼ŒåŒè„‘è„‘é’±åŒ…è¯ç”Ÿ</a><br>
+                <a href="http://www.8btc.com/bitcoin-brainwallet" target="_blank">ã€8<span class=btc>B</span>TCã€‘æ¯”ç‰¹å¸è„‘é’±åŒ…ï¼Œä½ åº”è¯¥ç”¨ï¼</a><br>
+				<a href="http://8btc.com/thread-21507-1-1.html" target="_blank">ã€è„‘é’±åŒ…ç§‘æ™®ã€‘èŠèŠè„‘é’±åŒ…çš„é‚£äº›äº‹å„¿</a><br>
+				<a href="http://www.bitecoin.com/online/2013/11/2899.html" target="_blank">ã€æ¯”ç‰¹å¸åŸºç¡€æ•™å­¦ã€‘ï¼šä½ å¯¹è„‘é’±åŒ…å¯†ç äº†è§£å¤šå°‘</a>
 </div><div class="col-lg-5 controls">
-				<a href="http://www.8btc.com/beyond-brainwallets" target="_blank">¡¾8<span class=btc>B</span>TC¡¿¸üÊ¤ÄÔÇ®°ü£ºÃÜ±£Ç®°ü</a><br>
-                <a href="http://www.8btc.com/long-live-brainwallet-iV" target="_blank">¡¾8<span class=btc>B</span>TC¡¿ÍòÎï½ÔÊÇÄÔÇ®°ü</a><br>
-				<a href="http://www.8btc.com/long-live-brainwallet" target="_blank">¡¾8<span class=btc>B</span>TC¡¿Brainwallet.org ÒÑËÀ£¬ÄÔÇ®°ü½«ÓÀÉú!</a><br>
-				<a href="https://bitcoin.org/zh_CN/choose-your-wallet" target="_blank">¡¾±ÈÌØ±Ò¹Ù·½¡¿£º·ÇÄÔÇ®°üµÄÆäËûÇ®°ü¹Ù·½ÍÆ¼ö</a>
+				<a href="http://www.8btc.com/beyond-brainwallets" target="_blank">ã€8<span class=btc>B</span>TCã€‘æ›´èƒœè„‘é’±åŒ…ï¼šå¯†ä¿é’±åŒ…</a><br>
+                <a href="http://www.8btc.com/long-live-brainwallet-iV" target="_blank">ã€8<span class=btc>B</span>TCã€‘ä¸‡ç‰©çš†æ˜¯è„‘é’±åŒ…</a><br>
+				<a href="http://www.8btc.com/long-live-brainwallet" target="_blank">ã€8<span class=btc>B</span>TCã€‘Brainwallet.org å·²æ­»ï¼Œè„‘é’±åŒ…å°†æ°¸ç”Ÿ!</a><br>
+				<a href="https://bitcoin.org/zh_CN/choose-your-wallet" target="_blank">ã€æ¯”ç‰¹å¸å®˜æ–¹ã€‘ï¼šéè„‘é’±åŒ…çš„å…¶ä»–é’±åŒ…å®˜æ–¹æ¨è</a>
 </div>
               </div> 
 	</fieldset>
 	</form>
 	  </div><script>
 				var onloadok=0;
-				document.getElementById('dizhi').innerHTML="ÇëµÈ´ı¼ÓÔØ...<br />";
+				document.getElementById('dizhi').innerHTML="è¯·ç­‰å¾…åŠ è½½...<br />";
 				function tongbu(tmp){
-				if(onloadok==0){dizhi.innerHTML="ÇëµÈ´ı¼ÓÔØ...<br />";
+				if(onloadok==0){dizhi.innerHTML="è¯·ç­‰å¾…åŠ è½½...<br />";
 				if(tmp!=""&&document.getElementById('addr').value!='1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN'){
 				document.getElementById('passs').value=tmp;
 				document.getElementById('secs').value=document.getElementById('sec').value;
@@ -164,7 +165,7 @@ var _hmt = _hmt || [];
 				}
 				}
 				if(tmp!=""&&onloadok==1&&document.getElementById('addr').value!='1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN'){
-				if(dizhi.innerHTML=="ÇëµÈ´ı¼ÓÔØ...<br />")dizhi.innerHTML="";
+				if(dizhi.innerHTML=="è¯·ç­‰å¾…åŠ è½½...<br />")dizhi.innerHTML="";
 				document.getElementById('passs').value=tmp;
 				document.getElementById('passa').value=tmp;
 				document.getElementById('passb').value=tmp+"@NaoKouLing.com";
@@ -182,8 +183,8 @@ var _hmt = _hmt || [];
 				{if(u!=""){
 				var urls="";
 				var nao=document.getElementById('pass').value;
-				if (nao.length<20)urls="&nbsp;&nbsp;<b>¾¯¸æ</b>£ºÄÔ¿ÚÁî³¤¶È½ö½öÎª"+nao.length+"£¬Ò»°ãÎªÄÔ²Ğ°ü£¬ÇëÎóÏò´ËµØÖ·ÉÏ·¢±Ò¡£¿É¿¼ÂÇ<a href='' onClick='siyao();return false;'>Ë½Ô¿¼ÓÈëÄÔ¿ÚÁî</a>¡£<br/>";
-				urls+="&nbsp;&nbsp;"+nao.length+"Î»ÄÔ¿ÚÁîµØÖ·£º<a href=http://idgui.com/t/?"+u+">"+u+"</a>";
+				if (nao.length<20)urls="&nbsp;&nbsp;<b>è­¦å‘Š</b>ï¼šè„‘å£ä»¤é•¿åº¦ä»…ä»…ä¸º"+nao.length+"ï¼Œä¸€èˆ¬ä¸ºè„‘æ®‹åŒ…ï¼Œè¯·è¯¯å‘æ­¤åœ°å€ä¸Šå‘å¸ã€‚å¯è€ƒè™‘<a href='' onClick='siyao();return false;'>ç§é’¥åŠ å…¥è„‘å£ä»¤</a>ã€‚<br/>";
+				urls+="&nbsp;&nbsp;"+nao.length+"ä½è„‘å£ä»¤åœ°å€ï¼š<a href=http://idgui.com/t/?"+u+">"+u+"</a>";
 				if(u.substr(0,1)=='1'){
 				urls+='<br />&nbsp;&nbsp;<a href="https://btc.com/'+u+'">BTC.com</a>';
 				urls+='&nbsp;&nbsp;<a href="https://live.blockcypher.com/btc/address/'+u+'">BlockCypher</a>';
@@ -191,15 +192,15 @@ var _hmt = _hmt || [];
 				urls+='&nbsp;&nbsp;<a href="https://tokenview.com/cn/btc/address/'+u+'">TokenView</a>';				
 				urls+='&nbsp;&nbsp;<a href="https://blockchair.com/bitcoin/address/'+u+'">BlockChair</a>';
 	$.get('https://api.blockcypher.com/v1/btc/main/addrs/'+u+'/balance')
-  .then(function(d) {if(d.balance>0)alert("¹§Ï²³É¹¦£¬±ÒµØÖ·ÉÏÓĞ"+d.balance+"´ÏBTC");document.getElementById('passa').value=(d.balance/100000000)+" BTC";});
+  .then(function(d) {if(d.balance>0)alert("æ­å–œæˆåŠŸï¼Œå¸åœ°å€ä¸Šæœ‰"+d.balance+"èªBTC");document.getElementById('passa').value=(d.balance/100000000)+" BTC";});
 				}
 				if(u.substr(0,1)=='D'){urls+='&nbsp;&nbsp;<a href="https://live.blockcypher.com/doge/address/'+u+'">BlockCypher</a>';
 				$.get('https://api.blockcypher.com/v1/doge/main/addrs/'+u+'/balance')
-  .then(function(d) {if(d.balance>0)alert("¹§Ï²³É¹¦£¬±ÒµØÖ·ÉÏÓĞ"+d.balance+"´ÏDOGE");document.getElementById('passa').value=(d.balance/100000000)+" DOGE";});
+  .then(function(d) {if(d.balance>0)alert("æ­å–œæˆåŠŸï¼Œå¸åœ°å€ä¸Šæœ‰"+d.balance+"èªDOGE");document.getElementById('passa').value=(d.balance/100000000)+" DOGE";});
 				}
 				if(u.substr(0,1)=='L'){urls+='&nbsp;&nbsp;<a href="https://live.blockcypher.com/ltc/address/'+u+'">BlockCypher</a>';
 				$.get('https://api.blockcypher.com/v1/ltc/main/addrs/'+u+'/balance')
-  .then(function(d) {if(d.balance>0)alert("¹§Ï²³É¹¦£¬±ÒµØÖ·ÉÏÓĞ"+d.balance+"´ÏLTC");document.getElementById('passa').value=(d.balance/100000000)+" LTC";});
+  .then(function(d) {if(d.balance>0)alert("æ­å–œæˆåŠŸï¼Œå¸åœ°å€ä¸Šæœ‰"+d.balance+"èªLTC");document.getElementById('passa').value=(d.balance/100000000)+" LTC";});
 				}
 				if(u.substr(0,1)=='W')urls+='&nbsp;&nbsp;<a href="https://www.waykiscan.com/#/address/'+u+'">&nbsp;WaykiScan</a>';
 				if(u.substr(0,1)=='w')urls+='&nbsp;&nbsp;<a href="https://testnet.waykiscan.com/#/address/'+u+'">&nbsp;WaykiScanTestnet</a>';
@@ -210,60 +211,60 @@ var _hmt = _hmt || [];
         <div class="tab-pane fade" id="generator">
           <form action="/" class="form-horizontal" method="get">
             <fieldset>
-              <legend><b>ÄÔÇ®°üĞÅÏ¢&nbsp;Generator</b><br>
-              <span style="font-size:14px">&nbsp;&nbsp;ÄÔÃÜÂë¾äÒª×ã¹»¸´ÔÓ£¬·ñÔò»á³ÉÎªÄÔ²Ğ°ü±»µÁÈ¡£¬¿ÉÒÔÄÔ²Ğ°üË½Ô¿±à¼­ºó×öÄÔ¿ÚÁî¡£Ò»¸öÄÔ¿ÚÁî¶ÔÓ¦·ÇÑ¹ËõºÍÑ¹ËõÁ½¸öµØÖ·¡£</span></legend>
+              <legend><b>è„‘é’±åŒ…ä¿¡æ¯&nbsp;Generator</b><br>
+              <span style="font-size:14px">&nbsp;&nbsp;è„‘å¯†ç å¥è¦è¶³å¤Ÿå¤æ‚ï¼Œå¦åˆ™ä¼šæˆä¸ºè„‘æ®‹åŒ…è¢«ç›—å–ï¼Œå¯ä»¥è„‘æ®‹åŒ…ç§é’¥ç¼–è¾‘ååšè„‘å£ä»¤ã€‚ä¸€ä¸ªè„‘å£ä»¤å¯¹åº”éå‹ç¼©å’Œå‹ç¼©ä¸¤ä¸ªåœ°å€ã€‚</span></legend>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="from_pass">µØÖ·Éú³É·½Ê½</label>
+                <label class="col-lg-2 control-label" for="from_pass">åœ°å€ç”Ÿæˆæ–¹å¼</label>
                 <div class="col-lg-10 controls">
                   <div class="btn-group" data-toggle="buttons" id="gen_from">
                     <label class="btn btn-default active" title="Single SHA256"><input id="from_pass" name="gen_from" type="radio" />
-                    ÔÚÊ×Ò³ÊäÄÔ¿ÚÁîPassphrase</label> <label class="btn btn-default" title="Hex-encoded"><input id="from_hash" name="gen_from" type="radio" />
-                    ¼ÓÃÜ²ÎÊıSecret Exponent</label> <label class="btn btn-default" title="Base58-encoded"><input id="from_sec" name="gen_from" type="radio" />Ë½Ô¿Private Key</label>
+                    åœ¨é¦–é¡µè¾“è„‘å£ä»¤Passphrase</label> <label class="btn btn-default" title="Hex-encoded"><input id="from_hash" name="gen_from" type="radio" />
+                    åŠ å¯†å‚æ•°Secret Exponent</label> <label class="btn btn-default" title="Base58-encoded"><input id="from_sec" name="gen_from" type="radio" />ç§é’¥Private Key</label>
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="pass">ÄÔ¿ÚÁî</label>
+                <label class="col-lg-2 control-label" for="pass">è„‘å£ä»¤</label>
                 <div class="col-lg-10 controls">
                   <div class="input-append">
-                    <input class="form-control" id="passs" disabled="disabled" placeholder="´ËÏîÇëÔÚ Ê×Ò³ ÊäÈëºÍĞŞ¸ÄÄÔ¿ÚÁî..." type="text" />
+                    <input class="form-control" id="passs" disabled="disabled" placeholder="æ­¤é¡¹è¯·åœ¨ é¦–é¡µ è¾“å…¥å’Œä¿®æ”¹è„‘å£ä»¤..." type="text" />
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="hash">¼ÓÃÜ²ÎÊı</label>
+                <label class="col-lg-2 control-label" for="hash">åŠ å¯†å‚æ•°</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="hash" maxlength="64" readonly spellcheck="false" title="SHA256(Passphrase), 256-bit ECDSA private key" type="text" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label">ĞÎÊ½×ª»»</label>
+                <label class="col-lg-2 control-label">å½¢å¼è½¬æ¢</label>
                 <div class="col-lg-10 controls">
                   <div class="btn-group" data-toggle="buttons" id="gen_comp">
-                    <label class="btn btn-default" title="Uncompressed keys (reference client)"><input name="uncompressed" type="radio" />Î´Ñ¹ËõUncompressed</label> <label class="btn btn-default active" title="Compressed keys (introduced in 0.5.99)"><input name="compressed" type="radio" />Ñ¹ËõCompressed</label>
+                    <label class="btn btn-default" title="Uncompressed keys (reference client)"><input name="uncompressed" type="radio" />æœªå‹ç¼©Uncompressed</label> <label class="btn btn-default active" title="Compressed keys (introduced in 0.5.99)"><input name="compressed" type="radio" />å‹ç¼©Compressed</label>
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="sec">Ë½Ô¿</label>
+                <label class="col-lg-2 control-label" for="sec">ç§é’¥</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="sec" readonly title="Wallet Import Format (Base58Check of Secret Exponent)" type="text" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="addr">µØÖ·</label>
+                <label class="col-lg-2 control-label" for="addr">åœ°å€</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="addr" readonly title="Bitcoin Address (Base58Check of HASH160)" type="text" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="genAddrQR">µØÖ·¶şÎ¬Âë</label>
+                <label class="col-lg-2 control-label" for="genAddrQR">åœ°å€äºŒç»´ç </label>
                 <div class="col-lg-10 controls">
                   <a href="#" id="genAddrURL" target="_blank" title="Click to view address history (external link)"><span id="genAddrQR"></span></a>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="der">Ë½Ô¿(DER)</label>
+                <label class="col-lg-2 control-label" for="der">ç§é’¥(DER)</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="der" readonly rows="5" title="ASN.1 DER-encoded ECDSA private key (OpenSSL)"></textarea>
                 </div>
@@ -275,7 +276,7 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="pub">¹«Ô¿<a href="http://idgui.com/n/ChainQuery.htm" title="Éú³É¶àÖØÇ©ÃûµØÖ·,ÓÃµ½´ËÊı¾İ" target="_blank">¶àÖØÇ©Ãû</a></label>
+                <label class="col-lg-2 control-label" for="pub">å…¬é’¥<a href="http://idgui.com/n/ChainQuery.htm" title="ç”Ÿæˆå¤šé‡ç­¾ååœ°å€,ç”¨åˆ°æ­¤æ•°æ®" target="_blank">å¤šé‡ç­¾å</a></label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="pub" readonly rows="2" title="SEC1-encoded ECDSA public key (OpenSSL)"></textarea>
                 </div>
@@ -287,48 +288,48 @@ var _hmt = _hmt || [];
         <div class="tab-pane fade" id="chains">
           <form action="/" class="form-horizontal" method="get">
             <fieldset>
-            <legend><b>ÅúÁ¿Á´&nbsp;Chains</b><br>
-            <span style="font-size:14px">&nbsp;&nbsp;¸ù¾İÊäÈëÇ®°ü¸øµÄÌØ¶¨¸ñÊ½×Ö´®À´Éú³ÉÒ»³¤Á´µØµØÖ·¡£ĞèÒªÏÈµ½¡°<a href="#converter" target="_blank">×ª»»</a>¡±Easy16¸ñÊ½µÄË½Ô¿£¬»òÕß12¸öPoetryµ¥´Ê¡£</span></legend>
+            <legend><b>æ‰¹é‡é“¾&nbsp;Chains</b><br>
+            <span style="font-size:14px">&nbsp;&nbsp;æ ¹æ®è¾“å…¥é’±åŒ…ç»™çš„ç‰¹å®šæ ¼å¼å­—ä¸²æ¥ç”Ÿæˆä¸€é•¿é“¾åœ°åœ°å€ã€‚éœ€è¦å…ˆåˆ°â€œ<a href="#converter" target="_blank">è½¬æ¢</a>â€Easy16æ ¼å¼çš„ç§é’¥ï¼Œæˆ–è€…12ä¸ªPoetryå•è¯ã€‚</span></legend>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="chType">Éú³É·½·¨</label>
+                <label class="col-lg-2 control-label" for="chType">ç”Ÿæˆæ–¹æ³•</label>
                 <div class="col-lg-10 controls">
                   <div class="btn-group" data-toggle="buttons" id="chType">
-                    <label class="btn btn-default active"><input id="armory" name="chType" type="radio" />ArmoryÇ®°ü£¨Ë½Ô¿µÄEasy16¸ñÊ½£©</label> <label class="btn btn-default"><input id="electrum" name="chType" type="radio" />ElectrumÇ®°ü£¨12¸öµ¥´ÊµÄPoetry¸ñÊ½£©</label>
+                    <label class="btn btn-default active"><input id="armory" name="chType" type="radio" />Armoryé’±åŒ…ï¼ˆç§é’¥çš„Easy16æ ¼å¼ï¼‰</label> <label class="btn btn-default"><input id="electrum" name="chType" type="radio" />Electrumé’±åŒ…ï¼ˆ12ä¸ªå•è¯çš„Poetryæ ¼å¼ï¼‰</label>
                   </div>&nbsp;&nbsp;<span class="help-inline" id="chMsg">&nbsp;</span>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="chRoot">¸ùÔ¿RootKey</label>
+                <label class="col-lg-2 control-label" for="chRoot">æ ¹é’¥RootKey</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="chRoot" maxlength="32" readonly type="text" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="chCode">Á´ÂëCode</label>
+                <label class="col-lg-2 control-label" for="chCode">é“¾ç Code</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="chCode" maxlength="64" readonly type="text" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="chBackup">ÊäÈëÖ½±¸·İ</label>
+                <label class="col-lg-2 control-label" for="chBackup">è¾“å…¥çº¸å¤‡ä»½</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="chBackup" rows="4" spellcheck="false"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="chRange">µØÖ·ÊıÁ¿</label>
+                <label class="col-lg-2 control-label" for="chRange">åœ°å€æ•°é‡</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="chRange" maxlength="3" type="text" value="5" />
                 </div>
               </div>
-              <div class="form-group" title="ElectrumÇ®°ü²ÅÓĞ£¬Ìí¼ÓÔÚµØÖ·ÁĞ±íºóÃæ">
-                <label class="col-lg-2 control-label" for="chChange">¸½¼ÓµØÖ·</label>
+              <div class="form-group" title="Electrumé’±åŒ…æ‰æœ‰ï¼Œæ·»åŠ åœ¨åœ°å€åˆ—è¡¨åé¢">
+                <label class="col-lg-2 control-label" for="chChange">é™„åŠ åœ°å€</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" disabled="disabled" id="chChange" maxlength="3" type="text" value="1" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="chFormat">µØÖ·¸ñÊ½</label>
+                <label class="col-lg-2 control-label" for="chFormat">åœ°å€æ ¼å¼</label>
                 <div class="col-lg-10 controls">
                   <div class="btn-group" data-toggle="buttons" id="chFormat">
                     <label class="btn btn-default active"><input id="csv" type="radio" />CSV</label> <label class="btn btn-default"><input id="json" type="radio" />JSON</label>
@@ -347,24 +348,24 @@ var _hmt = _hmt || [];
         <div class="tab-pane fade" id="tx">
           <form action="/" class="form-horizontal" method="get">
             <fieldset>
-              <legend><b>´«Êä·¢ËÍ&nbsp;Transactions</b><br>
-            <span style="font-size:14px">&nbsp;&nbsp;¹¹Ôì½»Ò×ÄÚÈİÇ©Ãû·¢ËÍ¡£¡¾"scriptPubKey": "OP_RETURN 455720e29885666666"¡¿<a href="#tx">×ª»»¹¤¾ß</a>±àÂëÌæ´ú³¤´®£¬½øĞĞ<a href="http://BtcEW.com/">EWÁôÑÔ</a>¡£</span></legend>
+              <legend><b>ä¼ è¾“å‘é€&nbsp;Transactions</b><br>
+            <span style="font-size:14px">&nbsp;&nbsp;æ„é€ äº¤æ˜“å†…å®¹ç­¾åå‘é€ã€‚ã€"scriptPubKey": "OP_RETURN 455720e29885666666"ã€‘<a href="#tx">è½¬æ¢å·¥å…·</a>ç¼–ç æ›¿ä»£é•¿ä¸²ï¼Œè¿›è¡Œ<a href="http://BtcEW.com/">EWç•™è¨€</a>ã€‚</span></legend>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="txFrom">¹¹½¨½»Ò×·½Ê½</label>
+                <label class="col-lg-2 control-label" for="txFrom">æ„å»ºäº¤æ˜“æ–¹å¼</label>
                 <div class="col-lg-10 controls">
                   <div class="btn-group" data-toggle="buttons" id="txFrom">
-                    <label class="btn btn-default active"><input id="txFromSec" name="txFrom" type="radio" />Ë½Ô¿Private Key</label> <label class="btn btn-default"><input id="txFromJSON" name="txFrom" type="radio" />JSON ½»Ò×´® Transaction</label> <label class="btn btn-default"><input id="txFromRaw" name="txFrom" type="radio" />Raw ½»Ò×´® Transaction</label>
+                    <label class="btn btn-default active"><input id="txFromSec" name="txFrom" type="radio" />ç§é’¥Private Key</label> <label class="btn btn-default"><input id="txFromJSON" name="txFrom" type="radio" />JSON äº¤æ˜“ä¸² Transaction</label> <label class="btn btn-default"><input id="txFromRaw" name="txFrom" type="radio" />Raw äº¤æ˜“ä¸² Transaction</label>
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="txSec">Ë½Ô¿</label>
+                <label class="col-lg-2 control-label" for="txSec">ç§é’¥</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="txSec" type="text" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="txAddr">·¢±ÒÀ´Ô´µØÖ·</label>
+                <label class="col-lg-2 control-label" for="txAddr">å‘å¸æ¥æºåœ°å€</label>
                 <div class="col-lg-10 controls">
                   <div class="row">
                     <div class="col-xs-6">
@@ -374,29 +375,29 @@ var _hmt = _hmt || [];
                       <span class="input-group"><span class="input-group-addon">BTC</span> <input class="form-control" id="txBalance" placeholder="0.00" readonly type="text" /></span>
                     </div>
                     <div class="col-xs-2">
-                      <button class="btn btn-default green" data-target="#txUnspentForm" data-toggle="collapse" id="txToggle" type="button">±à¼­ÊÕ±ÒÀúÊ·</button>
+                      <button class="btn btn-default green" data-target="#txUnspentForm" data-toggle="collapse" id="txToggle" type="button">ç¼–è¾‘æ”¶å¸å†å²</button>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="collapse" id="txUnspentForm">
                 <div class="form-group">
-                  <label class="col-lg-2 control-label" for="txBBE">Ê¹ÓÃÀúÊ·À´×Ô</label>
+                  <label class="col-lg-2 control-label" for="txBBE">ä½¿ç”¨å†å²æ¥è‡ª</label>
                   <div class="col-lg-10 controls">
                     <div class="btn-group" data-toggle="buttons" id="txType">
                       <label class="btn btn-default active"><input id="txBCI" name="txType" type="radio" />BlockChain.Info</label> <label class="btn btn-default"><input id="txBBE" name="txType" type="radio" />BTC.com</label>
-                    </div>&nbsp;<button class="btn btn-default help-inline green" id="txGetUnspent" type="button">ÏÂÔØÎ´»¨³ö±Ò¼ÇÂ¼</button>
+                    </div>&nbsp;<button class="btn btn-default help-inline green" id="txGetUnspent" type="button">ä¸‹è½½æœªèŠ±å‡ºå¸è®°å½•</button>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-lg-2 control-label" for="txUnspent">½»Ò×ÀúÊ·</label>
+                  <label class="col-lg-2 control-label" for="txUnspent">äº¤æ˜“å†å²</label>
                   <div class="col-lg-10 controls">
                     <textarea class="form-control" id="txUnspent" rows="16"></textarea>
                   </div>
                 </div>
               </div>
               <div class="form-group txCC">
-                <label class="col-lg-2 control-label" for="txDest">ÊÕ±ÒÄ¿±êµØÖ·</label>
+                <label class="col-lg-2 control-label" for="txDest">æ”¶å¸ç›®æ ‡åœ°å€</label>
                 <div class="col-lg-10 controls">
                   <div class="row">
                     <div class="col-xs-6">
@@ -406,25 +407,25 @@ var _hmt = _hmt || [];
                       <span class="input-group"><span class="input-group-addon">BTC</span> <input class="form-control" id="txValue" placeholder="0.00" type="text" /></span>
                     </div>
                     <div class="col-xs-3 help-inline">
-                      <button class="btn btn-default green" id="txAddDest" type="button">+</button>&nbsp;<button class="btn btn-default green" disabled="disabled" id="txRemoveDest" type="button">¨C</button>
+                      <button class="btn btn-default green" id="txAddDest" type="button">+</button>&nbsp;<button class="btn btn-default green" disabled="disabled" id="txRemoveDest" type="button">â€“</button>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="txJSON">JSON ½»Ò×´®</label>
+                <label class="col-lg-2 control-label" for="txJSON">JSON äº¤æ˜“ä¸²</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="txJSON" readonly rows="12" spellcheck="false"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="txHex">Raw ½»Ò×´®</label>
+                <label class="col-lg-2 control-label" for="txHex">Raw äº¤æ˜“ä¸²</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="txHex" readonly rows="5"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="txFee">¿ó¹¤ÊÖĞø·Ñ</label>
+                <label class="col-lg-2 control-label" for="txFee">çŸ¿å·¥æ‰‹ç»­è´¹</label>
                 <div class="col-lg-10 controls">
                   <div class="input-group">
                     <span class="input-group-addon">BTC</span> <input class="form-control" id="txFee" type="text" value="0.00010001" />
@@ -434,7 +435,7 @@ var _hmt = _hmt || [];
               <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10 controls">
                   <div class="input-group">
-                    <button class="btn btn-default green" id="txSign" title="Signatures require a random number which means signing the same data twice results in different sigs" type="button">Ë½Ô¿Ç©Ãû½»Ò×</button>  &nbsp;<a href="https://btc.com/tools/tx/publish">¡¾Raw½»Ò×¹ã²¥¡¿£ºBTC.com</a>&nbsp;<a href="https://live.blockcypher.com/btc/pushtx/">Blockcypher</a>&nbsp;<a href="http://idgui.com/pushtx">Doge</a>
+                    <button class="btn btn-default green" id="txSign" title="Signatures require a random number which means signing the same data twice results in different sigs" type="button">ç§é’¥ç­¾åäº¤æ˜“</button>  &nbsp;<a href="https://btc.com/tools/tx/publish">ã€Rawäº¤æ˜“å¹¿æ’­ã€‘ï¼šBTC.com</a>&nbsp;<a href="https://live.blockcypher.com/btc/pushtx/">Blockcypher</a>&nbsp;<a href="http://idgui.com/pushtx">Doge</a>
                   </div>
                 </div>
               </div>
@@ -444,10 +445,10 @@ var _hmt = _hmt || [];
         <div class="tab-pane fade" id="converter">
           <form action="/" class="form-horizontal" method="get">
             <fieldset>
-            <legend><b>×ª»»&nbsp;Converter</b><br>
-            <span style="font-size:14px">&nbsp;&nbsp;Êı¾İµÄ¸÷ÖÖ±àÂë¸ñÊ½Ö®¼äÏà»¥µÄ¿ìËÙ×ª»»£¬×¢Òâ½ö½öÖ»ÊÇ×ª¸ñÊ½£¬Èô¼ÓÃÜ»òÇóHASHÇë¼û<a href="#others">¹¤¾ß¼¯</a>¡£</span></legend>
+            <legend><b>è½¬æ¢&nbsp;Converter</b><br>
+            <span style="font-size:14px">&nbsp;&nbsp;æ•°æ®çš„å„ç§ç¼–ç æ ¼å¼ä¹‹é—´ç›¸äº’çš„å¿«é€Ÿè½¬æ¢ï¼Œæ³¨æ„ä»…ä»…åªæ˜¯è½¬æ ¼å¼ï¼Œè‹¥åŠ å¯†æˆ–æ±‚HASHè¯·è§<a href="#others">å·¥å…·é›†</a>ã€‚</span></legend>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="enc_from">Ô´±àÂë¸ñ</label>
+                <label class="col-lg-2 control-label" for="enc_from">æºç¼–ç æ ¼</label>
                 <div class="col-lg-10 controls">
                   <div class="btn-group" data-toggle="buttons" id="enc_from">
                     <label class="btn btn-default"><input id="from_hex" name="enc_from" type="radio" />Hex</label> <label class="btn btn-default"><input id="from_text" name="enc_from" type="radio" />Text</label> <label class="btn btn-default"><input id="from_bin" name="enc_from" type="radio" />Bin</label> <label class="btn btn-default"><input id="from_dec" name="enc_from" type="radio" />Dec</label> <label class="btn btn-default"><input id="from_base58" name="enc_from" type="radio" />Base58</label> <label class="btn btn-default"><input id="from_base58check" name="enc_from" type="radio" />B58Check</label> <label class="btn btn-default"><input id="from_base64" name="enc_from" type="radio" />Base64</label> <label class="btn btn-default"><input id="from_rfc1751" name="enc_from" type="radio" />RFC1751</label> <label class="btn btn-default"><input id="from_rot13" name="enc_from" type="radio" />Rot13</label> <label class="btn btn-default"><input id="from_easy16" name="enc_from" type="radio" />Easy16</label> <label class="btn btn-default"><input id="from_mnemonic" name="enc_from" type="radio" />Poetry</label>
@@ -455,7 +456,7 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="enc_from">Ô´ÎÄ±¾</label>
+                <label class="col-lg-2 control-label" for="enc_from">æºæ–‡æœ¬</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="src" rows="8" spellcheck="false"></textarea>
                   <div>
@@ -464,15 +465,15 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               <div class="form-group">
-			  <label class="col-lg-2 control-label" for="enc_from">×ª»¯¸ñÊ½</label>
+			  <label class="col-lg-2 control-label" for="enc_from">è½¬åŒ–æ ¼å¼</label>
                 <div class="col-lg-10 controls">
                   <div class="btn-group" data-toggle="buttons" id="enc_to">
-                    <label class="btn btn-default active"><input id="to_hex" name="enc_to" type="radio" />Hex</label> <label class="btn btn-default"><input id="to_text" name="enc_to" type="radio" />Text</label> <label class="btn btn-default"><input id="to_bin" name="enc_from" type="radio" />Bin</label><label class="btn btn-default"><input id="to_dec" name="enc_from" type="radio" />Dec</label> <label class="btn btn-default"><input id="to_base58" name="enc_to" type="radio" />Base58</label> <label class="btn btn-default"><input id="to_base58check" name="enc_to" type="radio" />B58Check</label> <label class="btn btn-default"><input id="to_base64" name="enc_to" type="radio" />Base64</label> <label class="btn btn-default"><input id="to_rfc1751" name="enc_to" type="radio" />RFC1751</label> <label class="btn btn-default"><input id="to_rot13" name="enc_to" type="radio" />Rot13</label> <label class="btn btn-default"><input id="to_easy16" name="enc_from" type="radio" />Easy16</label> <label class="btn btn-default"><input id="to_mnemonic" name="enc_to" type="radio" />Poetry</label> <label class="btn btn-default" onClick="var srcs=document.getElementById('src').value;var dests=document.getElementById('dest').value;if(temps=='')temps=srcs;if(srcs!=dests)document.getElementById('src').value=dests;else{document.getElementById('src').value=temps;}">ÏòÉÏÌæ»»</label><script>var temps="";</script>
+                    <label class="btn btn-default active"><input id="to_hex" name="enc_to" type="radio" />Hex</label> <label class="btn btn-default"><input id="to_text" name="enc_to" type="radio" />Text</label> <label class="btn btn-default"><input id="to_bin" name="enc_from" type="radio" />Bin</label><label class="btn btn-default"><input id="to_dec" name="enc_from" type="radio" />Dec</label> <label class="btn btn-default"><input id="to_base58" name="enc_to" type="radio" />Base58</label> <label class="btn btn-default"><input id="to_base58check" name="enc_to" type="radio" />B58Check</label> <label class="btn btn-default"><input id="to_base64" name="enc_to" type="radio" />Base64</label> <label class="btn btn-default"><input id="to_rfc1751" name="enc_to" type="radio" />RFC1751</label> <label class="btn btn-default"><input id="to_rot13" name="enc_to" type="radio" />Rot13</label> <label class="btn btn-default"><input id="to_easy16" name="enc_from" type="radio" />Easy16</label> <label class="btn btn-default"><input id="to_mnemonic" name="enc_to" type="radio" />Poetry</label> <label class="btn btn-default" onClick="var srcs=document.getElementById('src').value;var dests=document.getElementById('dest').value;if(temps=='')temps=srcs;if(srcs!=dests)document.getElementById('src').value=dests;else{document.getElementById('src').value=temps;}">å‘ä¸Šæ›¿æ¢</label><script>var temps="";</script>
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="enc_from">½á¹û</label>
+                <label class="col-lg-2 control-label" for="enc_from">ç»“æœ</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="dest" readonly rows="8"></textarea>
                   <div>
@@ -486,28 +487,28 @@ var _hmt = _hmt || [];
         <div class="tab-pane fade" id="sign">
           <form action="/" class="form-horizontal" id="sgForm" method="get" name="sgForm">
             <fieldset>
-              <legend><b>Ç©ÃûĞÅÏ¢&nbsp;Sign</b><br>
-            <span style="font-size:14px">&nbsp;&nbsp;¶ÔĞÅÏ¢Êı¾İÓÃË½Ô¿¼Ó¹¤£¬µÃµ½Ç©Ãû×Ö´®£¬ÒÔÓÃÓÚÖ¤Ã÷ÊÇ´ËµØÖ·ÓµÓĞÕßËù·¢µÄ¡£</span></legend>
+              <legend><b>ç­¾åä¿¡æ¯&nbsp;Sign</b><br>
+            <span style="font-size:14px">&nbsp;&nbsp;å¯¹ä¿¡æ¯æ•°æ®ç”¨ç§é’¥åŠ å·¥ï¼Œå¾—åˆ°ç­¾åå­—ä¸²ï¼Œä»¥ç”¨äºè¯æ˜æ˜¯æ­¤åœ°å€æ‹¥æœ‰è€…æ‰€å‘çš„ã€‚</span></legend>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="sgSec">Ë½Ô¿</label>
+                <label class="col-lg-2 control-label" for="sgSec">ç§é’¥</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="sgSec" spellcheck="false" type="text" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="sgAddr">µØÖ·</label>
+                <label class="col-lg-2 control-label" for="sgAddr">åœ°å€</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="sgAddr" readonly type="text" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="sgMsg">´ıÇ©ĞÅÏ¢</label>
+                <label class="col-lg-2 control-label" for="sgMsg">å¾…ç­¾ä¿¡æ¯</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="sgMsg" rows="2" spellcheck="false"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="sgType">Ç©Ãû¸ñÊ½</label>
+                <label class="col-lg-2 control-label" for="sgType">ç­¾åæ ¼å¼</label>
                 <div class="col-lg-10 controls">
                   <div class="btn-group" data-toggle="buttons" id="sgType">
                     <label class="btn btn-default active" title="Introduced by inputs.io, see https://inputs.io/clearsign"><input name="sgType" value="inputs_io" type="radio" checked/>Inputs.IO</label>
@@ -519,14 +520,14 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="sgSig">ÒÑÇ©ĞÅÏ¢</label>
+                <label class="col-lg-2 control-label" for="sgSig">å·²ç­¾ä¿¡æ¯</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="sgSig" readonly rows="9" spellcheck="false"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10 controls">
-                  <button class="btn btn-default green" id="sgSign" title="Signatures require a random number which means signing the same data twice results in different sigs" type="button">µã»÷Ç©Ãû</button>
+                  <button class="btn btn-default green" id="sgSign" title="Signatures require a random number which means signing the same data twice results in different sigs" type="button">ç‚¹å‡»ç­¾å</button>
                 </div>
               </div>
             </fieldset>
@@ -535,43 +536,43 @@ var _hmt = _hmt || [];
         <div class="tab-pane fade" id="verify">
           <form action="/" class="form-horizontal" id="vrForm" method="get" name="vrForm">
             <fieldset>
-              <legend><b>ÑéÖ¤Ç©Ãû&nbsp;Verify</b><br>
-            <span style="font-size:14px">&nbsp;&nbsp;¶ÔÒÑ¾­Ç©Ãû×Ö´®´¦Àí£¬ÒÔÖ¤Ã÷ÊÇ´ËĞÅÏ¢ÊÇµØÖ·ÓµÓĞÕßËù·¢³öµÄ¡£</span></legend>
+              <legend><b>éªŒè¯ç­¾å&nbsp;Verify</b><br>
+            <span style="font-size:14px">&nbsp;&nbsp;å¯¹å·²ç»ç­¾åå­—ä¸²å¤„ç†ï¼Œä»¥è¯æ˜æ˜¯æ­¤ä¿¡æ¯æ˜¯åœ°å€æ‹¥æœ‰è€…æ‰€å‘å‡ºçš„ã€‚</span></legend>
               <div class="hidden">
                 <div class="col-lg-offset-2 col-lg-10 alert alert-success fade in" id="vrSuccess">
-                  <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button> ÑéÖ¤³É¹¦ Message verified to be from <span id="vrAddrLabel"></span>
+                  <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button> éªŒè¯æˆåŠŸ Message verified to be from <span id="vrAddrLabel"></span>
                 </div>
                 <div class="col-lg-offset-2 col-lg-10 alert alert-danger fade in" id="vrError">
-                  <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button> Î´ÄÜÍ¨¹ıÑéÖ¤ Message failed to verify!
+                  <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button> æœªèƒ½é€šè¿‡éªŒè¯ Message failed to verify!
                 </div>
                 <div class="col-lg-offset-2 col-lg-10 alert alert-warning fade in" id="vrWarning">
-                  <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button> ÑéÖ¤³É¹¦ Message verified to be from <span id="vrAddrLabel"></span> (address wasn't specified)
+                  <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button> éªŒè¯æˆåŠŸ Message verified to be from <span id="vrAddrLabel"></span> (address wasn't specified)
                 </div>
               </div>
               <div id="vrAlert"></div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="vrFrom">Ç©Ãû¸ñÊ½</label>
+                <label class="col-lg-2 control-label" for="vrFrom">ç­¾åæ ¼å¼</label>
                 <div class="col-lg-10 controls">
                   <div class="btn-group" data-toggle="buttons" id="vrFrom">
-                    <label class="btn btn-default active" title="RFC2440-like"><input id="vrFromMessage" name="vrFrom" type="radio" checked/>ÕûÌåĞÅÏ¢</label>
-                    <label class="btn btn-default"><input id="vrFromForm" name="vrFrom" type="radio" />·Ö¶ÎÕ¹Ê¾</label>
+                    <label class="btn btn-default active" title="RFC2440-like"><input id="vrFromMessage" name="vrFrom" type="radio" checked/>æ•´ä½“ä¿¡æ¯</label>
+                    <label class="btn btn-default"><input id="vrFromForm" name="vrFrom" type="radio" />åˆ†æ®µå±•ç¤º</label>
                   </div>
                 </div>
               </div>
               <div class="form-group vrAddr" hidden>
-                <label class="col-lg-2 control-label" for="vrAddr">µØÖ·</label>
+                <label class="col-lg-2 control-label" for="vrAddr">åœ°å€</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="vrAddr" type="text"/>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label" for="vrMsg">´ıÑéĞÅÏ¢</label>
+                <label class="col-lg-2 control-label" for="vrMsg">å¾…éªŒä¿¡æ¯</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="vrMsg" rows="14" spellcheck="false"></textarea>
                 </div>
               </div>
               <div class="form-group vrSig" hidden>
-                <label class="col-lg-2 control-label" for="vrSig">Ç©Ãû×Ö´®</label>
+                <label class="col-lg-2 control-label" for="vrSig">ç­¾åå­—ä¸²</label>
                 <div class="col-lg-10 controls">
                   <input class="form-control" id="vrSig" type="text"/>
                 </div>
@@ -582,26 +583,26 @@ var _hmt = _hmt || [];
         <div class="tab-pane fade" id="others">
 		  <form action="/" class="form-horizontal" id="others" method="get" name="others">
 		<fieldset>
-              <legend><b>AES¼ÓÃÜ½âÃÜ&nbsp;
-              <button class="btn btn-default green" id="gydz" title="ÔÚÔ­ÎÄÊäÈë¹«Ô¿È»ºóµã»÷ÕâÀï" type="button" onClick="var aes=document.getElementById('aes').value;if(aes=='')alert('ÔÚÔ­ÎÄÊäÈë¹«Ô¿È»ºóµã»÷ÕâÀï');if(aes!='')document.getElementById('aesout').value=new Bitcoin.Address(Bitcoin.Util.sha256ripe160(Crypto.util.hexToBytes(aes)));">¹«Ô¿ËãµØÖ·</button>
-               <button class="btn btn-default green" id="sha" title="ÔÚÔ­ÎÄÊäÈëÈ»ºóµã»÷ÕâÀï" type="button" onClick="var aes=document.getElementById('aes').value;document.getElementById('aesout').value=Crypto.util.bytesToHex(Crypto.SHA256(Crypto.util.hexToBytes(aes),{asBytes:!0}));">SHA256</button>
-               <button class="btn btn-default green" id="sha" title="ÔÚÔ­ÎÄÊäÈëÈ»ºóµã»÷ÕâÀï" type="button" onClick="var aes=document.getElementById('aes').value;document.getElementById('aesout').value=Crypto.util.bytesToHex(Crypto.RIPEMD160(Crypto.util.hexToBytes(aes),{asBytes:!0}));">RIPEMD160</button></b><br>
-            <span style="font-size:14px">&nbsp;&nbsp;³£ÓÃµÄ¹¤¾ß£º¼ÓÃÜ¡¢ÇóHashµÄËã·¨¡¢<a href="http://idgui.com/pushtx/">¹ã²¥½»Ò×</a>¡¢<a href="https://bitnodes.21.co/nodes/">½Úµã²éÑ¯</a>¡¢<a href="https://blockchain.info/pools">ËãÁ¦·Ö²¼</a>¡¢<a href="https://btc.com/stats/unconfirmed-tx">ÊÖĞø·Ñ</a>¡£</span></legend>
+              <legend><b>AESåŠ å¯†è§£å¯†&nbsp;
+              <button class="btn btn-default green" id="gydz" title="åœ¨åŸæ–‡è¾“å…¥å…¬é’¥ç„¶åç‚¹å‡»è¿™é‡Œ" type="button" onClick="var aes=document.getElementById('aes').value;if(aes=='')alert('åœ¨åŸæ–‡è¾“å…¥å…¬é’¥ç„¶åç‚¹å‡»è¿™é‡Œ');if(aes!='')document.getElementById('aesout').value=new Bitcoin.Address(Bitcoin.Util.sha256ripe160(Crypto.util.hexToBytes(aes)));">å…¬é’¥ç®—åœ°å€</button>
+               <button class="btn btn-default green" id="sha" title="åœ¨åŸæ–‡è¾“å…¥ç„¶åç‚¹å‡»è¿™é‡Œ" type="button" onClick="var aes=document.getElementById('aes').value;document.getElementById('aesout').value=Crypto.util.bytesToHex(Crypto.SHA256(Crypto.util.hexToBytes(aes),{asBytes:!0}));">SHA256</button>
+               <button class="btn btn-default green" id="sha" title="åœ¨åŸæ–‡è¾“å…¥ç„¶åç‚¹å‡»è¿™é‡Œ" type="button" onClick="var aes=document.getElementById('aes').value;document.getElementById('aesout').value=Crypto.util.bytesToHex(Crypto.RIPEMD160(Crypto.util.hexToBytes(aes),{asBytes:!0}));">RIPEMD160</button></b><br>
+            <span style="font-size:14px">&nbsp;&nbsp;å¸¸ç”¨çš„å·¥å…·ï¼šåŠ å¯†ã€æ±‚Hashçš„ç®—æ³•ã€<a href="http://idgui.com/pushtx/">å¹¿æ’­äº¤æ˜“</a>ã€<a href="https://bitnodes.21.co/nodes/">èŠ‚ç‚¹æŸ¥è¯¢</a>ã€<a href="https://blockchain.info/pools">ç®—åŠ›åˆ†å¸ƒ</a>ã€<a href="https://btc.com/stats/unconfirmed-tx">æ‰‹ç»­è´¹</a>ã€‚</span></legend>
 		 <div class="form-group">
-                <label class="col-lg-2 control-label" for="aes">Ô­ÎÄÊäÈë</label>
+                <label class="col-lg-2 control-label" for="aes">åŸæ–‡è¾“å…¥</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="aes" rows="5" spellcheck="false" onChange="document.getElementById('aesout').value=CryptoJS.AES.encrypt(this.value,document.getElementById('aesmima').value);"></textarea>
                 </div>
               </div>
 			   <div class="form-group">
-                <label class="col-lg-2 control-label" for="aesmima"><span  onClick="var tmp=document.getElementById('aes').value;document.getElementById('aes').value=document.getElementById('aesout').value;document.getElementById('aesout').value=tmp;">AESÃÜÂë</span></label>
+                <label class="col-lg-2 control-label" for="aesmima"><span  onClick="var tmp=document.getElementById('aes').value;document.getElementById('aes').value=document.getElementById('aesout').value;document.getElementById('aesout').value=tmp;">AESå¯†ç </span></label>
                 <div class="col-lg-10 controls">
                   <input type="text" class="form-control" id="aesmima" value="YourPassword"  onChange="var aes=document.getElementById('aes').value;if(aes!='')document.getElementById('aesout').value=CryptoJS.AES.encrypt(aes,this.value);else{document.getElementById('aes').value=CryptoJS.AES.decrypt(document.getElementById('aesout').value,this.value).toString(CryptoJS.enc.Utf8);}"/>
                   
                 </div>
               </div>
 			   <div class="form-group">
-                <label class="col-lg-2 control-label" for="aesout">½á¹ûÊä³ö</label>
+                <label class="col-lg-2 control-label" for="aesout">ç»“æœè¾“å‡º</label>
                 <div class="col-lg-10 controls">
                   <textarea class="form-control" id="aesout" rows="5" spellcheck="false" onChange="document.getElementById('aes').value=CryptoJS.AES.decrypt(this.value,document.getElementById('aesmima').value).toString(CryptoJS.enc.Utf8);"></textarea>
                 </div>
@@ -649,7 +650,7 @@ d[k>>>24]^e[n>>>16&255]^j[g>>>8&255]^l[h&255]^c[p++],n=d[n>>>24]^e[g>>>16&255]^j
 </SCRIPT>
         <footer>
           <p>
-            &copy; 2015~2025 <a href="https://naokouling.com/">NaoKouLing.com</a>&nbsp;|&nbsp;<a href="https://ahr999.com/N">ahr999.com/N</a>&nbsp;|&nbsp;<a href="http://btayx.com/vbtcv.com">Öú¼Ç´Ê</a>&nbsp;|&nbsp;<a href="http://btayx.com/bi3d.com/">bi3d.com</a><span class="pull-right">&nbsp;&nbsp;Powered <a href="https://github.com/pointbiz/bitaddress.org">by</a> <a href="https://github.com/bypassfuture/bypassfuture.github.io">Git</a><a href="https://github.com/coreyphillips/brainwallet">Hub</a> &nbsp; <a href="https://github.com/naokouling/naokouling.com/">Download ZIP</a></span>          </p>
+            &copy; 2015~2025 <a href="https://naokouling.com/">NaoKouLing.com</a>&nbsp;|&nbsp;<a href="https://ahr999.com/N">ahr999.com/N</a>&nbsp;|&nbsp;<a href="http://btayx.com/vbtcv.com">åŠ©è®°è¯</a>&nbsp;|&nbsp;<a href="http://btayx.com/bi3d.com/">bi3d.com</a><span class="pull-right">&nbsp;&nbsp;Powered <a href="https://github.com/pointbiz/bitaddress.org">by</a> <a href="https://github.com/bypassfuture/bypassfuture.github.io">Git</a><a href="https://github.com/coreyphillips/brainwallet">Hub</a> &nbsp; <a href="https://github.com/naokouling/naokouling.com/">Download ZIP</a></span>          </p>
         </footer>
       </div>
     </div>
